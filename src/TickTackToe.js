@@ -1,6 +1,6 @@
 function getWinningLines(gridsize){
     const lines=[];
-
+    
     for(let row = 0 ; row < gridsize; row++){
         const rowLine = [];
         for (let col = 0; col < gridsize; col++){
@@ -28,8 +28,8 @@ function getWinningLines(gridsize){
         rightDiag.push(i * gridsize + (gridsize - 1 - i));
     }
     lines.push(rightDiag);
-    
-    console.log(lines);
+    // Debugging line
+    // console.log(lines);
     return lines;
 }
 
