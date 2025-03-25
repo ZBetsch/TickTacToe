@@ -2,18 +2,16 @@ import { useState } from 'react'
 
 export function Square({onSquareClick, value}){
     const styles={
-        background: `#fff`,
-        border: `1px solid #999`,
+        background: `#121213`,
+        color:`#f5f5f5`,
+        border: `3px solid rgb(188, 188, 188)`,
         float: `left`,
-        fontsize: `24px`,
-        fontweight: `bold`,
-        lineheight: `34px`,
-        height: `34px`,
-        marginright: `1px`,
-        margintop: `1px`,
-        padding: `0`,
+        fontSize: `24px`,
+        fontWeight: `bold`,
+        lineHeight: `34px`,
+        height: `60px`,
         textalign: `center`,
-        width: `34px`
+        width: `60px`
     }
 
     return <button style={styles} onClick={onSquareClick}>{value}</button>

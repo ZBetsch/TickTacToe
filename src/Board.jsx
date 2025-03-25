@@ -26,19 +26,31 @@ export function Board({gridSize}){
         setWinner(()=> {return null})
     }
 
-    return  <div style={{
-        display: `grid`,
-        gridTemplateColumns: `repeat(${gridSize}, 34px)`
-    }}>
-        {
-            squares.map((square, i) =>
-            <Square key={i} value={square} onSquareClick={() => handleSquareClick(i)}/>
-            )}
-            <div>
-                <p>Winner IS: {winner}</p>
-                <div>
-                    <button onClick={() => handleGameRestart()} >Reset</button>
-                </div>
+    return (
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+            <div style={{
+                display: `grid`,
+                gridTemplateColumns: `repeat(${gridSize}, 60px)`,
+                gap: `5px`
+            }}>
+                {squares.map((square, i) =>
+                <Square key={i} value={square} onSquareClick={() => handleSquareClick(i)}/>
+                )}
             </div>
-    </div>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center'
+                }}>
+                <p>Winner IS: {winner}</p>
+                <button onClick={() => handleGameRestart()} >Reset</button>
+            </div>
+        </div>
+    )   
 }
