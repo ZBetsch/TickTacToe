@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Board } from './Board';
+import { Board } from './TicTacToe/Board';
 
 function App() {
 
